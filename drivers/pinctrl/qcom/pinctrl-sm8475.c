@@ -1680,7 +1680,6 @@ static const struct of_device_id sm8475_tlmm_of_match[] = {
 	{ .compatible = "qcom,sm8475-tlmm", },
 	{ /* sentinel */ },
 };
-MODULE_DEVICE_TABLE(of, sm8475_tlmm_of_match);
 
 static struct platform_driver sm8475_tlmm_driver = {
 	.driver = {
@@ -1688,7 +1687,6 @@ static struct platform_driver sm8475_tlmm_driver = {
 		.of_match_table = sm8475_tlmm_of_match,
 	},
 	.probe = sm8475_tlmm_probe,
-	.remove_new = msm_pinctrl_remove,
 };
 
 static int __init sm8475_tlmm_init(void)
@@ -1705,3 +1703,4 @@ module_exit(sm8475_tlmm_exit);
 
 MODULE_DESCRIPTION("Qualcomm SM8475 TLMM driver");
 MODULE_LICENSE("GPL");
+MODULE_DEVICE_TABLE(of, sm8475_tlmm_of_match);
