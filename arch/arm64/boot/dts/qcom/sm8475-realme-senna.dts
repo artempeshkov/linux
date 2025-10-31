@@ -495,6 +495,13 @@
 			regulator-max-microvolt = <958000>;
 			regulator-initial-mode = <RPMH_REGULATOR_MODE_HPM>;
 		};
+
+		vreg_l4h_1p8: ldo4 {
+			regulator-name = "vreg_l4h_1p8";
+			regulator-min-microvolt = <1800000>;
+			regulator-max-microvolt = <1800000>;
+			regulator-initial-mode = <RPMH_REGULATOR_MODE_HPM>;
+		};
 	};
 
 	regulators-3 {
