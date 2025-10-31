@@ -373,9 +373,13 @@
 
 		vreg_l3c_3p0: ldo3 {
 			regulator-name = "vreg_l3c_3p0";
-			regulator-min-microvolt = <2700000>;
-			regulator-max-microvolt = <3544000>;
+			//regulator-min-microvolt = <2700000>;
+			//regulator-max-microvolt = <3544000>;
+			regulator-min-microvolt = <3300000>;
+			regulator-max-microvolt = <3300000>;
 			regulator-initial-mode = <RPMH_REGULATOR_MODE_HPM>;
+			regulator-always-on;
+			regulator-boot-on;
 		};
 
 		vreg_l4c_1p8_3p0: ldo4 {
